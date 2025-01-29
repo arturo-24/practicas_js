@@ -1,0 +1,244 @@
+:root {
+    --fuenteHeading:'Pt Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+
+    --primario: #784D3C;
+    --gris:#e1e1e1;
+    --blanco: #ffffff;
+    --negro: #000000;
+
+}
+
+html{ /* Siempre colocar estos codigos en el html, el border-box es para que no moelste tus posiciones*/
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem= 10px*/
+}
+*, *:before, *:after { /*Este codigo va con el html para que se adapte a nuevas normas*/
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2; /*EN los blogs es normal colcoar un interlineado de 2 o chance grande*/
+}
+
+/*--Globales--*/
+
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto; /* Centra el contenido horizontalmente, RECUERDA */
+}
+
+a { /*Todo enlace no va a tener sus rayas*/
+    text-decoration: none; 
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fuenteHeading);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+h4 {
+    font-size: 2.8rem;
+}
+
+img {
+    max-width: 98%;
+}
+
+/*--Utilidades--*/ 
+.no-margin { /*En algunos navegadroes ya vienen automatico el margin, este codigo lo elimina hasta q tu le pongas lo apropieado*/
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0; /*En algunos navegadroes ya vienen automatico el padding, este codigo lo elimina hasta q tu le pongas lo apropieado*/
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+/*--header--*/ 
+/*Imagen de fondo del header*/
+.header {
+    background-image: url(../img/banner.jpg);
+    height: 60rem; /*defines la altura*/
+    background-size: cover; /*Esta codigo hace que no se repita la imagen cuando lo agrandeces con "no-repeat"*/
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header_texto{
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 5rem; /*este crea un espacio encima de las palabras*/
+}
+
+@media (min-width: 768px) { 
+    .header_texto {
+        margin-top: 13rem;
+    }
+}
+/*---- FIn de Imagen de fondo del header ----*/
+
+/*--barra de navegacion--*/ 
+
+.barra{
+    padding:  2rem;
+}
+@media (min-width: 768px) { 
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+}
+
+.logo {
+    color: var(--blanco);
+}
+.logo__nombre {
+    font-weight: lighter;    
+}
+
+.logo__bold {
+    font-weight: bold;
+    font-size: 6rem;
+}
+
+/*--- navegacion ---*/
+/* Siempre se presenta la pantalla web */
+
+@media (min-width: 768px) { 
+    .navegacion {
+        display: flex;
+        gap: 4rem; /* Recuerda.. clases de patrones */
+    }
+}
+
+
+.navegacion__enlace {
+    display: block; /* Para que los elementos esten uno abajo del otro (paara movil) */
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blanco)
+}
+
+/*---- FIn de navegacion ----*/
+
+/*-- Main--*/
+@media (min-width: 768px) { 
+    .contenido-principal {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 4rem;
+    }
+}
+
+.entrada {
+    border-bottom: 1px solid var(--gris); /*Este codigo crea una linea horizontal entre las entradas*/
+    margin-bottom: 4rem; /*Este codgio yac rea la linea que buscas*/
+}
+
+.entrada:last-of-type { /* Este codigo hace que el ultimo "entrada" no se efectue el borde que no queremos*/
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.boton {
+    display: block;
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) { 
+    .boton {
+        display: inline-block; /* El "inline" no funciona correctamente con margin y weight, utilzia este codigo*/
+    }
+}
+
+.boton--primario{
+    background-color: var(--primario);
+}
+.boton--secundario {
+    background-color: var(--primario);
+}
+
+.cursos {
+    list-style: none; /*Elimina el marcador de lista que crea "li"*/
+    font-size: 2.4rem;
+}
+
+.widget-cursos{
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 7rem;
+}
+
+.widget-cursos:last-of-type { /* Este codigo hace que el ultimo "entrada" no se efectue el borde que no queremos*/
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.widget-cursos__label {
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+
+.widget-cursos__precio {
+    font-weight: normal;
+}
+
+.widget-cursos__label,
+.widget-cursos__precio {
+    font-size: 3rem;
+}
+
+/*** Footer ***/
+
+.footer {
+    background-color: var(--primario);
+    height: 22rem;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer a:hover {
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+
+@media (min-width: 768px) {         
+    .footer {
+        background-color: var(--primario);
+        height: 12rem;
+        padding: 3rem 0;
+        margin-top: 5rem;
+        padding-bottom: 12rem;
+    }
+}
+
