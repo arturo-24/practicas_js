@@ -242,3 +242,16 @@ img {
     }
 }
 
+
+/*-- SOBRE NOSOTROS --*/
+@media (min-width: 768px) {
+    .sobre-nosotro {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .sobre-nosotros__imagen, 
+    .sobre-nosotros__texto {
+        flex-basis: calc(50% - 1rem) /* Esta debes investigarlo.*/
+    }
+}
