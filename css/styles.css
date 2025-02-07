@@ -171,12 +171,16 @@ img {
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 2rem;
+    border: none;
 }
 
 @media (min-width: 768px) { 
     .boton {
         display: inline-block; /* El "inline" no funciona correctamente con margin y weight, utilzia este codigo*/
     }
+}
+.boton:hover {
+    cursor: pointer;
 }
 
 .boton--primario{
@@ -220,7 +224,7 @@ img {
 .footer {
     background-color: var(--primario);
     height: 22rem;
-    margin-top: 5rem;
+    margin-top: 80rem auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -243,7 +247,7 @@ img {
 }
 
 
-/*-- SOBRE NOSOTROS --*/
+/*-- SOBRE NOSOTROS - PAGINA --*/
 @media (min-width: 768px) {
     .sobre-nosotro {
         display: flex;
@@ -254,4 +258,82 @@ img {
     .sobre-nosotros__texto {
         flex-basis: calc(50% - 1rem) /* Esta debes investigarlo.*/
     }
+}
+
+
+/*-- Cursos - Pagina --*/
+.curso{
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--gris);
+}
+
+@media (min-width: 768px) { 
+    .curso {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+
+.curso:last-of-type {
+    border-bottom: none;
+}
+
+.curso__label {
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.curso__info {
+    font-weight: normal;
+}
+
+.cursos__label,
+.cursos__precio {
+    font-size: 3rem;
+}
+
+/*-- Entradas --*/
+.entrada-paginas{
+    padding: 3rem 0;
+}
+
+/*-- Contacto --*/
+.contacto_bg{
+    background-image: url(../img/contacto.jpg);
+    height: 80rem; /*defines la altura*/
+    background-size: cover; /*Esta codigo hace que no se repita la imagen cuando lo agrandeces con "no-repeat"*/
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/*-- Formulario --*/
+.formulario {
+    background-color: var(--blanco);
+    margin: -10rem auto 0 auto;
+    width: 95%; /* CUANDO COLOCAS -5 REM IRA HACIA ARRIBA */
+    padding: 5rem;
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem; /* tiene mas separacion entre campos*/
+}
+
+.campo__label { 
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem; /* Ayuda a la separacion de elemento pero de manera de izquierda nomas.*/
+}
+
+.campo__field {
+    flex: 1;
+    border: 3px solid var(--gris);
+}
+
+.campo__field--textarea {
+    height: 20rem;
+    width: 100%;
+    resize: none; /* Para que los usuarios no pueden editar el tamaño del textarea*/
 }
