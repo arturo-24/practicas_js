@@ -75,8 +75,14 @@ img {
 
 /*--header--*/ 
 /*Imagen de fondo del header*/
-.header {
+.webp .header {
+    background-image: url(../img/banner.webp);
+}
+.no-webp .header {
     background-image: url(../img/banner.jpg);
+}
+
+.header {
     height: 60rem; /*defines la altura*/
     background-size: cover; /*Esta codigo hace que no se repita la imagen cuando lo agrandeces con "no-repeat"*/
     background-repeat: no-repeat;
