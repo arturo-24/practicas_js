@@ -51,3 +51,21 @@ console.log(usuarioAsignado); // "Pedro"
 
 // [0, 1, 2, 3, 4, 5, 6, 7]
 // Ana, Juan, Pedro, María, Luis.
+
+
+// ~~ 3 comrobacion de divisibilidad ~~ //
+
+function esDivisiblePor3o5(numero) {
+    if (numero % 3 === 0 || numero % 5 === 0) {
+        return true;
+    }
+    return false;
+}
+
+console.log(esDivisiblePor3o5(9));  // true (es divisible por 3)
+console.log(esDivisiblePor3o5(10)); // true (es divisible por 5)
+console.log(esDivisiblePor3o5(7));  // false (no es divisible por 3 ni por 5)
+
+// Explicacion:
+// Verificamos si un numero es divisible por 3 o 5, utilizando el operador modulo. SI el residuo de la division por 3 o por 5 es cero ( numero % 3 === 0), entonces el numero es divisible. Esta es una forma eficiente de realizar este tipo de comprobaciones.
+
