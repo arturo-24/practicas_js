@@ -65,7 +65,28 @@ function esDivisiblePor3o5(numero) {
 console.log(esDivisiblePor3o5(9));  // true (es divisible por 3)
 console.log(esDivisiblePor3o5(10)); // true (es divisible por 5)
 console.log(esDivisiblePor3o5(7));  // false (no es divisible por 3 ni por 5)
-
 // Explicacion:
 // Verificamos si un numero es divisible por 3 o 5, utilizando el operador modulo. SI el residuo de la division por 3 o por 5 es cero ( numero % 3 === 0), entonces el numero es divisible. Esta es una forma eficiente de realizar este tipo de comprobaciones.
 
+
+
+// ~~ 4 encontrar el ciclo de elementos en un array ~~ //
+
+const tareas = ["Tarea 1", "Tarea 2", "Tarea 3", "Tarea 4"];
+let turnos = 0; // Empezamos en el primer elemento
+
+// Función para asignar una tarea de forma cíclica
+function asignarTarea() {
+    console.log(`Asignada: ${tareas[turnos]}`);
+    turnos = (turnos + 1) % tareas.length;  // Incrementamos y nos aseguramos de que el índice no se salga del array
+}
+
+asignarTarea(); // Asignada: Tarea 1
+asignarTarea(); // Asignada: Tarea 2
+asignarTarea(); // Asignada: Tarea 3
+asignarTarea(); // Asignada: Tarea 4
+asignarTarea(); // Asignada: Tarea 1 (ciclo)
+
+// Expplicacion:
+// Ejemplo clasico de usar el operador modulo para ciclar a traves de un conjunto de elementos. 
+// Cada vez que se llama a asignarTarea(), el indic e de turnos aumenta, pero gracias a "modulo" evitamos que el indice se salga del array.
