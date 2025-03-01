@@ -18,6 +18,5 @@ producto.imagen = "imagen.jpg";
 delete producto.precio; // "obkect.freeze no te permite eliminar, ya que afecta a las propiedades."
 
 
-
 console.log(producto);
 
