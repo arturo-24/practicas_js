@@ -28,3 +28,4 @@ reproductor.pausar();
 reproductor.borrarCancion(34);
 reproductor.crearPlaylist('Ella ya me olvido - Leonardo Favio');
 reproductor.reproducirPlaylist('A puro dolor')
+
