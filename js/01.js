@@ -27,9 +27,9 @@ var _disponible; // SI PODES INCIAR UNA VARIABLE CON UN NOMBRE CON GUION BAJO O 
 // ESTILOS DE VARIABLES
 
 var nombre_producto = 'montior hd'; // underscore
-var nombreProducto = 'montior hd'; // CamelCase
+var nombreProdwucto = 'montior hd'; // CamelCase
 var NombreProducto = 'montior hd'; // PascalCase
-var nobmreproducto = 'montior hd'; // 
+var nombreproducto = 'montior hd'; // 
 
 
 console.log(nombre_producto);

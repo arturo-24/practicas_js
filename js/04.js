@@ -16,7 +16,7 @@ console.log(mensaje); // Imprime: Hola, Arturo
 
 // Concatenacion de cadenaas
 let nombre = "Arturo";
-let apellido = " Cochea";
+let apellido = "Cochea";
 let nombre_completo = nombre + apellido + ' el mejor de la clase WEB';
 
 console.log(nombre_completo);

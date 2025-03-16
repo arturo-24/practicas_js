@@ -1,7 +1,5 @@
 // letaibles con let
 
-
-
 var nombre = "Arthur",
     disponible1 = true,
     categoria = "Programador"; /* Este es un sintaxis de agregar 3 letiables en un solo let*/
@@ -12,7 +10,7 @@ var nombre = "Arthur",
 
 let nombre = "Arthur"; // iniciamos la letiable y su respectivo valor
 
-let disponible; // inciiamos la letiable pero sin valor
+let disponible; // iniciamos la letiable pero sin valor
 
 producto = true; // Reasignando el valor de la letiable
 
