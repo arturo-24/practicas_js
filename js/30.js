@@ -10,7 +10,9 @@ const usuarioAutenticado = new Promise( (resolve, reject) =>{
     }
 });
 
-console.log(usuarioAutenticado);
+usuarioAutenticado // SIn el "then" no s epeude finalizar el promise 
+    .then( (resultado) => console.log(resultado))
+    .catch((error) => console.log(error));
 
 // EN los Promises existen 3 valores
 // Pending : No se ha cumplido pero tampoco se ha rechazado
